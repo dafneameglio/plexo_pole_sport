@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+/* =========
+   PALETA DE COLORES
+   ========*/
+
+:root {
+    --color-primario:  #c1a669 ;
+    --color-secundario: #946c2e ;
+    --color-acento:  #a5833f ;
+}
+
+/* Estilos para los elementos del header */
+
+header {
+    background: linear-gradient(to top, var(--color-primario), var(--color-secundario));
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos para los textos */
+
+
+body {
+    font-family: 'Abel', sans-serif;
+    background: linear-gradient(to top, var(--color-primario), var(--color-secundario));
+    padding: 10px;
+}
+
+h1 {
+    color: #0e0e0e;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #000;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+p, ul, li {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+figcaption {
+    text-align: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+}
+
+/* Estilos para las imágenes */
+
+.logo {
+    width: 350px;
+    height: 220px;
+}
+
+.imagen-contacto {
+    width: 350px;
+    height: 220px;
+}
+
+
+/* Estilos para los elementos del main */
+
+main {
+    background-color: var(--color-primario);
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    
+}
+/* Estilos para los elementos del footer */
+
+footer {
+    background-color: var(--color-acento);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
