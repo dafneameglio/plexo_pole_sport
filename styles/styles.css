@@ -6,30 +6,63 @@
 
 /* =========
    PALETA DE COLORES
-   ========*/
+   ========= */
 
 :root {
-    --color-primario:  #c1a669 ;
-    --color-secundario: #946c2e ;
-    --color-acento:  #a5833f ;
+    --color-primario: #c1a669;
+    --color-secundario: #946c2e;
+    --color-acento: #a5833f;
 }
 
-/* Estilos para los elementos del header */
+/* =========
+   HEADER
+   ========= */
 
-.header_principal { 
+header {
     background-color: #000;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
 }
 
-/* Estilos para los textos */
+/* =========
+   FLEXBOX
+   ========= */
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.lista_navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+/* =========
+   TEXTOS
+   ========= */
 
 body {
     font-family: 'Abel', sans-serif;
-    background:  #c1a669 ;
-    padding: 0px;
+    background: #c1a669;
+    padding: 0;
 }
 
 .titulo_principal {
@@ -41,10 +74,11 @@ body {
 
 .subtitulo {
     color: #000;
-    text-align: left;
+    align-self: flex-start;
     font-size: 40px;
     font-weight: 700;
     border-bottom: 2px solid var(--color-secundario);
+
 }
 
 .texto_general {
@@ -68,11 +102,13 @@ figcaption {
     padding: 5px;
 }
 
-/* Estilos para las imágenes */
+/* =========
+   IMÁGENES
+   ========= */
 
 .logo {
-    width: 230px;
-    height: 170px;
+    width: 130px;
+    height: auto;
 }
 
 .imagen_contacto {
@@ -80,25 +116,61 @@ figcaption {
     height: 220px;
 }
 
-img {
-    width: 300px;
-    padding: 20px;
+.imagen_duo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
+.imagen_vic img {
+    width: 40%;
+    display: block;
+}
 
-/* Estilos para los elementos del main */
+.imagen_vic {
+    align-self: flex-start;
+}
+
+.imagen_vic figcaption {
+    text-align: left;
+}
+
+.imagen_clases img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========
+   MAIN
+   ========= */
 
 .contenido_principal {
-    background: linear-gradient(to top, var(--color-primario), var(--color-secundario));
+    background: linear-gradient(to top,
+            var(--color-primario),
+            var(--color-secundario));
+
     padding: 10px;
     margin: 20px auto;
-    margin-bottom: 20px;
     width: 100%;
     height: 100%;
+    align-content: center;
 }
 
+section article ul {
+    align-self: flex-start;
+    text-align: left;
+}
 
-/* Estilos para los elementos del footer */
+.imagen_fede,
+.imagen_agus {
+    display: none;
+}
+
+/* =========
+   FOOTER
+   ========= */
 
 .pie_pagina {
     background-color: var(--color-acento);
@@ -106,31 +178,475 @@ img {
     padding: 10px;
 }
 
-/* Estilos para flexbox */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
+/* =========
+   GRID - MOBILE
+   ========= */
+
+.contenedor_index {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+
+    grid-template-areas:
+        "imagen_coty"
+        "imagen_fede"
+        "imagen_mar";
+
+    width: 100%;
+    padding: 0;
 }
 
-.lista_navbar {
-    display: flex;
-    gap: 20px;
-    align-items: center;    
-    list-style: none;
-    text-decoration:none;
-    color: var(--color-primario);
+.contenedor_index img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
-section article {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
+.imagen_coty {
+    grid-area: imagen_coty;
 }
 
-section {
-    margin-bottom: 10px;
-} 
+.imagen_fede {
+    grid-area: imagen_fede;
+}
+
+.imagen_mar {
+    grid-area: imagen_mar;
+}
+
+/* =========
+   GRID CONTENEDOR header profes
+   ========= */
+
+ /* .contenedor {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 2fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+        "imagen_uno imagen_dos imagen_cuatro"
+        "imagen_uno imagen_tres imagen_cuatro";
+
+    gap: 5px;
+
+    width: 100%;
+    margin: 20px auto;
+    padding: 0;
+}  */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "imagen_uno"
+        "imagen_dos"
+        "imagen_tres"
+        "imagen_cuatro";
+    gap: 5px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.contenedor img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* mq para tablet-desktop header pag profes*/
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+
+        grid-template-areas:
+            "imagen_uno imagen_dos imagen_cuatro"
+            "imagen_uno imagen_tres imagen_cuatro";
+    }
+
+}
+
+.imagen_uno_josu {
+    grid-area: imagen_uno;
+    background-color: #000;
+}
+
+.imagen_dos_daf {
+    grid-area: imagen_dos;
+    background-color: #000;
+}
+
+.imagen_tres_agus {
+    grid-area: imagen_tres;
+    background-color: #000;
+}
+
+.imagen_cuatro_mili {
+    grid-area: imagen_cuatro;
+    background-color: #000;
+}
+
+.contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========
+   GRID - page clases - modalidad_sport */
+
+.fran_polesport,
+.vale_flexi,
+.duo_libre4,
+.agusq_straps {
+    display: none;
+}
+
+.modalidad_sport {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "sofi_polesport"
+        "josu_polesport"
+        "lu_polesport";
+    gap: 5px;
+    width: 100%;
+}
+
+.sofi_polesport {
+    grid-area: sofi_polesport;
+}
+
+.josu_polesport {
+    grid-area: josu_polesport;
+}
+
+.lu_polesport {
+    grid-area: lu_polesport;
+}
+
+.modalidad_sport img,
+.modalidad_flexi img,
+.modalidad_libre img,
+.modalidad_straps img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; 
+}
+
+/* mq para tablet - modalidad_sport */
+@media (min-width: 768px) {
+    .modalidad_sport {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "sofi_polesport lu_polesport"
+            "josu_polesport lu_polesport";
+    }
+
+    .lu_polesport {
+        grid-area: lu_polesport;
+        background-color: #000;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+        background-color: #000;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+        background-color: #000;
+    }
+}
+/* mq para desktop - modalidad_sport */
+@media (min-width: 1024px) {
+
+    .fran_polesport{
+        display: block;
+    }
+    .modalidad_sport {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "lu_polesport fran_polesport"
+            "lu_polesport sofi_polesport"
+            "lu_polesport josu_polesport";
+    }
+
+    .lu_polesport {
+        grid-area: lu_polesport;
+        background-color: #000;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+        background-color: #000;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+        background-color: #000;
+    }
+    .fran_polesport {
+        grid-area: fran_polesport;
+        background-color: #000;
+    }
+}
+
+
+/* modalidad flexi */
+.modalidad_flexi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "mili_flexi"
+        "josu_flexi"
+        "agus_flexi";
+    gap: 5px;
+    width: 100%;
+}
+
+.mili_flexi {
+    grid-area: mili_flexi;
+    background-color: #000;
+}
+
+.josu_flexi {
+    grid-area: josu_flexi;
+    background-color: #000;
+}
+
+.agus_flexi {
+    grid-area: agus_flexi;
+    background-color: #000;
+
+}
+
+
+/* mq para tablet - modalidad flexi */
+@media (min-width: 768px) {
+    .modalidad_flexi {
+
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "agus_flexi mili_flexi"
+            "josu_flexi mili_flexi";
+    }
+
+}
+/* mq para desktop - modalidad flexi */
+@media (min-width: 1024px) {
+    .vale_flexi {
+        display: block;
+    }
+
+    .modalidad_flexi{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "agus_flexi mili_flexi"
+        "josu_flexi vale_flexi";
+    }
+
+    .vale_flexi{
+        grid-area: vale_flexi;
+        background-color: #000;
+    }
+}
+
+/* modalidad libre */
+.modalidad_libre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "duo_libre1"
+        "duo_libre2"
+        "duo_libre3";
+    gap: 5px;
+    width: 100%;
+}
+
+.duo_libre1 {
+    grid-area: duo_libre1;
+    background-color: #000;
+}
+
+.duo_libre2 {
+    grid-area: duo_libre2;
+    background-color: #000;
+}
+
+.duo_libre3 {
+    grid-area: duo_libre3;
+    background-color: #000;
+}
+
+/* mq para tablet - modalidad libre */
+@media (min-width: 768px) {
+
+    .duo_libre4 {
+        display: block;
+    }
+    .modalidad_libre {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "duo_libre1 duo_libre2"
+            "duo_libre3 duo_libre4";
+    }
+    
+.duo_libre4 {
+    grid-area: duo_libre4;
+    background-color: #000;
+}
+}
+
+/* mq para desktop - modalidad libre */
+/* me gusta como se encuentra hasta ahora sin modificarle nada */
+
+
+/* modalidad straps */
+.modalidad_straps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "lu_straps"
+        "daf_straps"
+        "lucas_straps";
+    gap: 5px;
+    width: 100%;
+}
+.lu_straps{
+    grid-area: lu_straps;
+    background-color: #000;
+}
+.lucas_straps{
+    grid-area: lucas_straps;
+    background-color: #000;
+}
+.daf_straps{
+    grid-area: daf_straps;
+    background-color: #000;
+}
+
+
+/* mq para tablet - modalidad straps */
+@media (min-width: 768px) {
+    .modalidad_straps {
+
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "lucas_straps lu_straps"
+            "daf_straps lu_straps";
+    }
+
+}
+
+
+/* =========
+MQ tablet - PAGINA INDEX
+   ========= */
+
+@media (min-width: 768px) {
+    .imagen_fede {
+        display: block;
+    }
+
+    .contenedor_index {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "imagen_fer imagen_fede"
+            "imagen_mar imagen_coty";
+    }
+
+    .imagen_fer {
+        grid-area: imagen_fer;
+        background-color: #000;
+    }
+
+    .imagen_mar {
+        grid-area: imagen_mar;
+        background-color: #000;
+    }
+
+    .imagen_fede {
+        grid-area: imagen_fede;
+        background-color: #000;
+    }
+
+    .imagen_coty {
+        grid-area: imagen_coty;
+        background-color: #000;
+    }
+
+}
+
+/* =========
+   mq DESKTOP - index
+   ========= */
+
+@media (min-width: 1024px) {
+
+    .imagen_agus,
+    .imagen_fede {
+        display: block;
+    }
+
+    .contenedor_index {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "imagen_mar imagen_coty"
+            "imagen_agus imagen_fer"
+            "imagen_fede imagen_fede";
+        gap: 5px;
+    }
+
+    .imagen_agus {
+        grid-area: imagen_agus;
+        background-color: #000;
+    }
+
+    .imagen_fer {
+        grid-area: imagen_fer;
+        background-color: #000;
+    }
+
+    .imagen_mar {
+        grid-area: imagen_mar;
+        background-color: #000;
+    }
+
+    .imagen_fede {
+        grid-area: imagen_fede;
+        background-color: #000;
+    }
+
+    .imagen_coty {
+        grid-area: imagen_coty;
+        background-color: #000;
+    }
+}
