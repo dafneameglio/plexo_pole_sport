@@ -30,9 +30,6 @@ header {
    ========= */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 5px;
 }
 
@@ -649,4 +646,85 @@ MQ tablet - PAGINA INDEX
         grid-area: imagen_coty;
         background-color: #000;
     }
+}
+
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar .nav-link {
+    color: #c1a669;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+.navbar .nav-link:focus {
+    color: #fff;
+}
+
+.navbar .nav-link:active {
+    color: #946c2e;
+}
+
+.navbar .navbar-toggler {
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-toggler:hover {
+    border-color: #c1a669;
+    transform: scale(1.05);
+}
+
+.navbar .navbar-toggler:focus {
+    border-color: #c1a669;
+    box-shadow: 0 0 0 0.2rem rgba(193, 166, 105, 0.25);
+}
+
+.navbar .navbar-toggler:active {
+    transform: scale(0.95);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: 2px solid #c1a669;
+    outline-offset: 3px;
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    transform: scale(0.95);
+}
+
+.accordion-button {
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    color: #000;
+    background-color: #d8c99d;
+}
+
+.accordion-button:focus {
+    color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(193, 166, 105, 0.25);
+}
+
+.accordion-button:active {
+    background-color: #946c2e;
+    color: #fff;
 }

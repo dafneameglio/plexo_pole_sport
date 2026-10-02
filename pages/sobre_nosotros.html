@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <!-- css propio -->
+    <link rel="stylesheet" href="../styles/styles.css">
 
     <title>Sobre Nosotros | Plexo Pole Sport</title>
 </head>
@@ -20,20 +24,51 @@
 
 
 
-        <div class="navbar">
-            <figure>
-                <img class="logo" src="../images/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
-            </figure>
+        <div class="navbar navbar-expand-lg">
 
-            <nav>
-                <ul class="lista_navbar">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="clases.html">Clases</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo" src="../images/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPlexo"
+                    aria-controls="navbarPlexo" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <nav class="collapse navbar-collapse" id="navbarPlexo">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="clases.html">Clases</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
         </div>
         <h1 class="titulo_principal">Sobre Nosotros</h1>
         <p class="texto_header">
@@ -116,6 +151,8 @@
         <a href="https://www.facebook.com/" target="_blank">Facebook</a>
 
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
