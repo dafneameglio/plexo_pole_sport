@@ -65,8 +65,20 @@ body {
 .titulo_principal {
     color: var(--color-primario);
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .titulo_principal {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .titulo_principal {
+        font-size: 60px;
+    }
 }
 
 .subtitulo {
@@ -108,9 +120,11 @@ figcaption {
     height: auto;
 }
 
-.imagen_contacto {
-    width: 350px;
-    height: 220px;
+.imagen-contacto {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
 }
 
 .imagen_duo img {
