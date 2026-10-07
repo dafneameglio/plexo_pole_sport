@@ -114,6 +114,14 @@ figcaption {
 /* =========
    IMÁGENES
    ========= */
+.imagen_cuatro {
+    text-align: left;
+}
+
+.imagen_cuatro img {
+    width: 60%;
+    height: auto;
+}
 
 .logo {
     width: 130px;
@@ -667,10 +675,16 @@ MQ tablet - PAGINA INDEX
     background-color: #000;
 }
 
+.navbar .navbar-brand {
+    margin-right: auto;
+}
+
 .navbar .nav-link {
     color: #c1a669;
     transition: all 0.3s ease;
 }
+
+
 
 .navbar .nav-link:hover {
     color: #fff;
@@ -678,6 +692,10 @@ MQ tablet - PAGINA INDEX
 
 .navbar .nav-link:focus {
     color: #fff;
+}
+
+.navbar .nav-link.active {
+    color: #c1a669;
 }
 
 .navbar .nav-link:active {
