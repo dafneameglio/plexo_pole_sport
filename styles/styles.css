@@ -1,12 +1,17 @@
+/* =========================
+   RESET
+   ========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* =========
+
+/* =========================
    PALETA DE COLORES
-   ========= */
+   ========================= */
 
 :root {
     --color-primario: #c1a669;
@@ -14,9 +19,17 @@
     --color-acento: #a5833f;
 }
 
-/* =========
-   HEADER
-   ========= */
+
+/* =========================
+   MOBILE FIRST
+   ESTILOS GENERALES
+   ========================= */
+
+body {
+    font-family: 'Abel', sans-serif;
+    background: #c1a669;
+    padding: 0;
+}
 
 header {
     background-color: #000;
@@ -25,9 +38,22 @@ header {
     margin: 0 auto;
 }
 
-/* =========
+section {
+    margin-bottom: 10px;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* =========================
    FLEXBOX
-   ========= */
+   ========================= */
 
 .navbar {
     padding: 5px;
@@ -40,27 +66,10 @@ header {
     list-style: none;
 }
 
-section article {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-}
 
-section {
-    margin-bottom: 10px;
-}
-
-/* =========
+/* =========================
    TEXTOS
-   ========= */
-
-body {
-    font-family: 'Abel', sans-serif;
-    background: #c1a669;
-    padding: 0;
-}
+   ========================= */
 
 .titulo_principal {
     color: var(--color-primario);
@@ -69,25 +78,12 @@ body {
     font-weight: 700;
 }
 
-@media (min-width: 768px) {
-    .titulo_principal {
-        font-size: 50px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .titulo_principal {
-        font-size: 60px;
-    }
-}
-
 .subtitulo {
     color: #000;
     align-self: flex-start;
     font-size: 40px;
     font-weight: 700;
     border-bottom: 2px solid var(--color-secundario);
-
 }
 
 .texto_general {
@@ -111,9 +107,11 @@ figcaption {
     padding: 5px;
 }
 
-/* =========
+
+/* =========================
    IMÁGENES
-   ========= */
+   ========================= */
+
 .imagen_cuatro {
     text-align: left;
 }
@@ -161,15 +159,17 @@ figcaption {
     display: block;
 }
 
-/* =========
+
+/* =========================
    MAIN
-   ========= */
+   ========================= */
 
 .contenido_principal {
-    background: linear-gradient(to top,
-            var(--color-primario),
-            var(--color-secundario));
-
+    background: linear-gradient(
+        to top,
+        var(--color-primario),
+        var(--color-secundario)
+    );
     padding: 10px;
     margin: 20px auto;
     width: 100%;
@@ -182,14 +182,10 @@ section article ul {
     text-align: left;
 }
 
-.imagen_fede,
-.imagen_agus {
-    display: none;
-}
 
-/* =========
+/* =========================
    FOOTER
-   ========= */
+   ========================= */
 
 .pie_pagina {
     background-color: var(--color-acento);
@@ -197,22 +193,25 @@ section article ul {
     padding: 10px;
 }
 
-/* =========
-   GRID - MOBILE
-   ========= */
+
+/* =========================
+   MOBILE FIRST
+   GRID - INDEX
+   ========================= */
+
+.imagen_fede,
+.imagen_agus {
+    display: none;
+}
 
 .contenedor_index {
     display: grid;
-
     grid-template-columns: 1fr;
-
     gap: 5px;
-
     grid-template-areas:
         "imagen_coty"
         "imagen_fede"
         "imagen_mar";
-
     width: 100%;
     padding: 0;
 }
@@ -237,27 +236,11 @@ section article ul {
     grid-area: imagen_mar;
 }
 
-/* =========
-   GRID CONTENEDOR header profes
-   ========= */
 
- /* .contenedor {
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 2fr;
-
-    grid-template-rows: 1fr 1fr;
-
-    grid-template-areas:
-        "imagen_uno imagen_dos imagen_cuatro"
-        "imagen_uno imagen_tres imagen_cuatro";
-
-    gap: 5px;
-
-    width: 100%;
-    margin: 20px auto;
-    padding: 0;
-}  */
+/* =========================
+   MOBILE FIRST
+   GRID - CONTENEDOR PROFES
+   ========================= */
 
 .contenedor {
     display: grid;
@@ -281,21 +264,6 @@ section article ul {
     margin: 0 auto;
 }
 
-/* mq para tablet-desktop header pag profes*/
-
-@media (min-width: 768px) {
-
-    .contenedor {
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 1fr 1fr;
-
-        grid-template-areas:
-            "imagen_uno imagen_dos imagen_cuatro"
-            "imagen_uno imagen_tres imagen_cuatro";
-    }
-
-}
-
 .imagen_uno_josu {
     grid-area: imagen_uno;
     background-color: #000;
@@ -316,15 +284,11 @@ section article ul {
     background-color: #000;
 }
 
-.contenedor img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
-/* =========
-   GRID - page clases - modalidad_sport */
+/* =========================
+   MOBILE FIRST
+   GRID - MODALIDAD SPORT
+   ========================= */
 
 .fran_polesport,
 .vale_flexi,
@@ -357,6 +321,11 @@ section article ul {
     grid-area: lu_polesport;
 }
 
+
+/* =========================
+   IMÁGENES - MODALIDADES
+   ========================= */
+
 .modalidad_sport img,
 .modalidad_flexi img,
 .modalidad_libre img,
@@ -364,76 +333,19 @@ section article ul {
     max-width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; 
-}
-
-/* mq para tablet - modalidad_sport */
-@media (min-width: 768px) {
-    .modalidad_sport {
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "sofi_polesport lu_polesport"
-            "josu_polesport lu_polesport";
-    }
-
-    .lu_polesport {
-        grid-area: lu_polesport;
-        background-color: #000;
-    }
-
-    .josu_polesport {
-        grid-area: josu_polesport;
-        background-color: #000;
-    }
-
-    .sofi_polesport {
-        grid-area: sofi_polesport;
-        background-color: #000;
-    }
-}
-/* mq para desktop - modalidad_sport */
-@media (min-width: 1024px) {
-
-    .fran_polesport{
-        display: block;
-    }
-    .modalidad_sport {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-            "lu_polesport fran_polesport"
-            "lu_polesport sofi_polesport"
-            "lu_polesport josu_polesport";
-    }
-
-    .lu_polesport {
-        grid-area: lu_polesport;
-        background-color: #000;
-    }
-
-    .josu_polesport {
-        grid-area: josu_polesport;
-        background-color: #000;
-    }
-
-    .sofi_polesport {
-        grid-area: sofi_polesport;
-        background-color: #000;
-    }
-    .fran_polesport {
-        grid-area: fran_polesport;
-        background-color: #000;
-    }
+    object-fit: cover;
 }
 
 
-/* modalidad flexi */
+/* =========================
+   MOBILE FIRST
+   GRID - MODALIDAD FLEXI
+   ========================= */
+
 .modalidad_flexi {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "mili_flexi"
         "josu_flexi"
@@ -455,43 +367,14 @@ section article ul {
 .agus_flexi {
     grid-area: agus_flexi;
     background-color: #000;
-
 }
 
 
-/* mq para tablet - modalidad flexi */
-@media (min-width: 768px) {
-    .modalidad_flexi {
+/* =========================
+   MOBILE FIRST
+   GRID - MODALIDAD LIBRE
+   ========================= */
 
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "agus_flexi mili_flexi"
-            "josu_flexi mili_flexi";
-    }
-
-}
-/* mq para desktop - modalidad flexi */
-@media (min-width: 1024px) {
-    .vale_flexi {
-        display: block;
-    }
-
-    .modalidad_flexi{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-        "agus_flexi mili_flexi"
-        "josu_flexi vale_flexi";
-    }
-
-    .vale_flexi{
-        grid-area: vale_flexi;
-        background-color: #000;
-    }
-}
-
-/* modalidad libre */
 .modalidad_libre {
     display: grid;
     grid-template-columns: 1fr;
@@ -519,32 +402,12 @@ section article ul {
     background-color: #000;
 }
 
-/* mq para tablet - modalidad libre */
-@media (min-width: 768px) {
 
-    .duo_libre4 {
-        display: block;
-    }
-    .modalidad_libre {
+/* =========================
+   MOBILE FIRST
+   GRID - MODALIDAD STRAPS
+   ========================= */
 
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "duo_libre1 duo_libre2"
-            "duo_libre3 duo_libre4";
-    }
-    
-.duo_libre4 {
-    grid-area: duo_libre4;
-    background-color: #000;
-}
-}
-
-/* mq para desktop - modalidad libre */
-/* me gusta como se encuentra hasta ahora sin modificarle nada */
-
-
-/* modalidad straps */
 .modalidad_straps {
     display: grid;
     grid-template-columns: 1fr;
@@ -556,24 +419,136 @@ section article ul {
     gap: 5px;
     width: 100%;
 }
-.lu_straps{
+
+.lu_straps {
     grid-area: lu_straps;
     background-color: #000;
 }
-.lucas_straps{
+
+.lucas_straps {
     grid-area: lucas_straps;
     background-color: #000;
 }
-.daf_straps{
+
+.daf_straps {
     grid-area: daf_straps;
     background-color: #000;
 }
 
 
-/* mq para tablet - modalidad straps */
-@media (min-width: 768px) {
-    .modalidad_straps {
+/* =========================
+   BREAKPOINT TABLET
+   768px
+   ========================= */
 
+
+/* GRID - CONTENEDOR PROFES */
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "imagen_uno imagen_dos imagen_cuatro"
+            "imagen_uno imagen_tres imagen_cuatro";
+    }
+
+    .contenedor img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+@media (min-width: 768px) {
+
+    .titulo_principal {
+        font-size: 50px;
+    }
+
+}
+
+
+/* GRID - MODALIDAD SPORT */
+
+@media (min-width: 768px) {
+
+    .modalidad_sport {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "sofi_polesport lu_polesport"
+            "josu_polesport lu_polesport";
+    }
+
+    .lu_polesport {
+        grid-area: lu_polesport;
+        background-color: #000;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+        background-color: #000;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+        background-color: #000;
+    }
+
+}
+
+
+/* GRID - MODALIDAD FLEXI */
+
+@media (min-width: 768px) {
+
+    .modalidad_flexi {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "agus_flexi mili_flexi"
+            "josu_flexi mili_flexi";
+    }
+
+}
+
+
+/* GRID - MODALIDAD LIBRE */
+
+@media (min-width: 768px) {
+
+    .duo_libre4 {
+        display: block;
+    }
+
+    .modalidad_libre {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "duo_libre1 duo_libre2"
+            "duo_libre3 duo_libre4";
+    }
+
+    .duo_libre4 {
+        grid-area: duo_libre4;
+        background-color: #000;
+    }
+
+}
+
+
+/* GRID - MODALIDAD STRAPS */
+
+@media (min-width: 768px) {
+
+    .modalidad_straps {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
@@ -584,11 +559,10 @@ section article ul {
 }
 
 
-/* =========
-MQ tablet - PAGINA INDEX
-   ========= */
+/* GRID - INDEX */
 
 @media (min-width: 768px) {
+
     .imagen_fede {
         display: block;
     }
@@ -623,9 +597,90 @@ MQ tablet - PAGINA INDEX
 
 }
 
-/* =========
-   mq DESKTOP - index
-   ========= */
+
+/* =========================
+   BREAKPOINT DESKTOP
+   1024px
+   ========================= */
+
+
+/* TÍTULO PRINCIPAL */
+
+@media (min-width: 1024px) {
+
+    .titulo_principal {
+        font-size: 60px;
+    }
+
+}
+
+
+/* GRID - MODALIDAD SPORT */
+
+@media (min-width: 1024px) {
+
+    .fran_polesport {
+        display: block;
+    }
+
+    .modalidad_sport {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "lu_polesport fran_polesport"
+            "lu_polesport sofi_polesport"
+            "lu_polesport josu_polesport";
+    }
+
+    .lu_polesport {
+        grid-area: lu_polesport;
+        background-color: #000;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+        background-color: #000;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+        background-color: #000;
+    }
+
+    .fran_polesport {
+        grid-area: fran_polesport;
+        background-color: #000;
+    }
+
+}
+
+
+/* GRID - MODALIDAD FLEXI */
+
+@media (min-width: 1024px) {
+
+    .vale_flexi {
+        display: block;
+    }
+
+    .modalidad_flexi {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "agus_flexi mili_flexi"
+            "josu_flexi vale_flexi";
+    }
+
+    .vale_flexi {
+        grid-area: vale_flexi;
+        background-color: #000;
+    }
+
+}
+
+
+/* GRID - INDEX */
 
 @media (min-width: 1024px) {
 
@@ -668,8 +723,14 @@ MQ tablet - PAGINA INDEX
         grid-area: imagen_coty;
         background-color: #000;
     }
+
 }
 
+
+/* =========================
+   BOOTSTRAP
+   AJUSTES PERSONALIZADOS
+   ========================= */
 
 .navbar {
     background-color: #000;
@@ -683,8 +744,6 @@ MQ tablet - PAGINA INDEX
     color: #c1a669;
     transition: all 0.3s ease;
 }
-
-
 
 .navbar .nav-link:hover {
     color: #fff;
@@ -720,6 +779,11 @@ MQ tablet - PAGINA INDEX
     transform: scale(0.95);
 }
 
+
+/* =========================
+   BOOTSTRAP - CAROUSEL
+   ========================= */
+
 .carousel-control-prev,
 .carousel-control-next {
     transition: all 0.3s ease;
@@ -741,6 +805,11 @@ MQ tablet - PAGINA INDEX
 .carousel-control-next:active {
     transform: scale(0.95);
 }
+
+
+/* =========================
+   BOOTSTRAP - ACCORDION
+   ========================= */
 
 .accordion-button {
     transition: all 0.3s ease;
