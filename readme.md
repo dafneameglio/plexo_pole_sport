@@ -10,6 +10,7 @@ El sitio presenta información sobre las clases y actividades de PLEXO Pole Spor
 
 ## Cómo descargar y ejecutar el proyecto
 
+
 ### Clonar el repositorio
 
 Desde una terminal:
@@ -23,6 +24,9 @@ Luego ingresar a la carpeta del proyecto:
 ```bash
 cd plexo_pole_sport
 ```
+
+### Ejecutar el proyecto
+
 
 ### Ejecutar el proyecto
 
@@ -244,3 +248,30 @@ El objetivo de esta etapa del proyecto es construir una interfaz web estructurad
 * Diseño responsive.
 
 El proyecto continúa evolucionando en las siguientes etapas del curso, incorporando nuevas tecnologías y mejoras sobre la estructura desarrollada inicialmente.
+
+
+
+
+## Evidencias
+
+Las siguientes capturas permiten verificar la implementación responsive
+y el uso de CSS Grid en las páginas evaluadas.
+
+### Responsive
+
+- `index-mobile-1.png`: vista mobile del inicio.
+- `index-mobile-2.png`: continuación de la vista mobile del inicio.
+- `index-tablet.png`: vista tablet del inicio.
+- `index-desktop.png`: vista desktop del inicio.
+- `clases-mobile-1.png`: vista mobile de la página de clases.
+- `clases-mobile-2.png`: continuación de la vista mobile de la página de clases.
+- `clases-desktop.png`: vista desktop de la página de clases.
+
+### Código CSS
+
+- `css-modalidad-straps-mobile-first.png`: implementación de CSS Grid
+  en Mobile First para la modalidad Straps.
+- `css-modalidad-straps-tablet-768px.png`: adaptación del Grid
+  de Straps mediante el breakpoint de 768px.
+- `css-breakpoint-1024px.png`: implementación del breakpoint
+  de 1024px mediante `@media`.
