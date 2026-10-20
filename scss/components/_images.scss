@@ -1,0 +1,46 @@
+.imagen_cuatro {
+    text-align: left;
+
+    img {
+        width: 60%;
+        height: auto;
+    }
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+.imagen-contacto {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+
+.imagen_duo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagen_vic {
+    align-self: flex-start;
+
+    img {
+        width: 40%;
+        display: block;
+    }
+
+    figcaption {
+        text-align: left;
+    }
+}
+
+.imagen_clases img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

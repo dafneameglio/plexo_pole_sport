@@ -1,0 +1,7 @@
+@use "../utilities/variables";
+
+.pie_pagina {
+    background-color: variables.$color-acento;
+    width: 100%;
+    padding: 10px;
+}

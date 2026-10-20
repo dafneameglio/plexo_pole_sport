@@ -1,0 +1,56 @@
+@use "../utilities/variables";
+
+.navbar {
+    padding: 5px;
+    background-color: variables.$color-negro;
+}
+
+.lista_navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .navbar-brand {
+    margin-right: auto;
+}
+
+.navbar .nav-link {
+    color: variables.$color-primario;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: variables.$color-blanco;
+    }
+
+    &:focus {
+        color: variables.$color-blanco;
+    }
+
+    &.active {
+        color: variables.$color-primario;
+    }
+
+    &:active {
+        color: variables.$color-secundario;
+    }
+}
+
+.navbar .navbar-toggler {
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: variables.$color-primario;
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        border-color: variables.$color-primario;
+        box-shadow: 0 0 0 0.2rem variables.$sombra-focus;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

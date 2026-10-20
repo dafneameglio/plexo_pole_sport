@@ -1,0 +1,43 @@
+@use "../utilities/variables";
+
+/* CAROUSEL */
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    &:focus {
+        outline: 2px solid variables.$color-primario;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ACCORDION */
+
+.accordion-button {
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: variables.$color-negro;
+        background-color: variables.$color-hover-accordion;
+    }
+
+    &:focus {
+        color: variables.$color-negro;
+        box-shadow: 0 0 0 0.2rem variables.$sombra-focus;
+    }
+
+    &:active {
+        background-color: variables.$color-secundario;
+        color: variables.$color-blanco;
+    }
+}
