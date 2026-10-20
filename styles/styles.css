@@ -120,6 +120,57 @@ header {
   transform: scale(0.95);
 }
 
+.boton-plexo {
+  background-color: #946c2e;
+  color: #fff;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1.125rem;
+}
+.boton-plexo:hover {
+  background-color: #a5833f;
+  transform: translateY(-2px);
+}
+.boton-plexo:focus-visible {
+  outline: 2px solid #c1a669;
+  outline-offset: 3px;
+}
+.boton-plexo:active {
+  transform: translateY(0);
+}
+
+.boton-plexo--contorno {
+  border: 2px solid #946c2e;
+  border-radius: 0.4rem;
+}
+
+.boton-plexo--contorno {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  color: #946c2e;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.boton-plexo--contorno:hover {
+  background-color: #946c2e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.boton-plexo--contorno:active {
+  transform: translateY(0);
+}
+.boton-plexo--contorno:focus-visible {
+  outline: 2px solid #c1a669;
+  outline-offset: 3px;
+}
+
 /* CAROUSEL */
 .carousel-control-prev,
 .carousel-control-next {
@@ -201,6 +252,76 @@ header {
   display: block;
 }
 
+.galeria-pole {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.imagen_vic {
+  width: 100%;
+  min-width: 0;
+}
+.imagen_vic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cinta-pole {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.cinta-pole__pista {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  width: max-content;
+  animation: deslizar-pole 18s linear infinite;
+}
+.cinta-pole img {
+  display: block;
+  flex: 0 0 220px;
+  width: 220px;
+  height: 290px;
+  object-fit: contain;
+}
+
+@keyframes deslizar-pole {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 768px) {
+  .galeria-pole {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .imagen_vic {
+    flex: 0 0 40%;
+  }
+  .cinta-pole {
+    flex: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .cinta-pole img {
+    flex-basis: 220px;
+    width: 220px;
+    height: 280px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinta-pole__pista {
+    animation: none;
+  }
+}
 /* MAIN */
 .contenido_principal {
   background: linear-gradient(to top, #c1a669, #946c2e);
@@ -253,8 +374,9 @@ section article ul {
 /* GRID - CONTENEDOR PROFES */
 .contenedor {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "imagen_uno" "imagen_dos" "imagen_tres" "imagen_cuatro";
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "imagen_uno imagen_dos imagen_cuatro" "imagen_uno imagen_tres imagen_cuatro";
   gap: 5px;
   width: 100%;
   margin: 20px auto;
