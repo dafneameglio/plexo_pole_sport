@@ -1,0 +1,67 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Estilos base para botones propios de PLEXO
+.boton-plexo {
+    @include mixins.button-variant(
+        variables.$color-secundario,
+        variables.$color-blanco
+    );
+
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1rem + 0.125rem;
+
+    &:hover {
+        background-color: variables.$color-acento;
+        transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+        outline: 2px solid variables.$color-primario;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Estilos compartidos para elementos con borde
+%elemento-con-borde {
+    border: 2px solid variables.$color-secundario;
+    border-radius: 0.4rem;
+}
+
+// Variante de botón con borde
+.boton-plexo--contorno {
+    @extend %elemento-con-borde;
+
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: variables.$color-secundario;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        background-color: variables.$color-secundario;
+        color: variables.$color-blanco;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:focus-visible {
+        outline: 2px solid variables.$color-primario;
+        outline-offset: 3px;
+    }
+}
