@@ -35,3 +35,26 @@ figcaption {
     color: variables.$color-negro;
     padding: 5px;
 }
+
+// Ajustes responsive para pantallas pequeñas
+@media (max-width: 767px) {
+    .titulo_principal {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 28px;
+    }
+
+    .texto_header {
+        font-size: 18px;
+    }
+
+    .texto_general {
+        font-size: 14px;
+    }
+
+    figcaption {
+        font-size: 14px;
+    }
+}

@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
+    <!-- Librería de animaciones AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
     <!-- css propio -->
     <link rel="stylesheet" href="./styles/styles.css">
 
@@ -87,7 +90,7 @@
 
         <section>
 
-            <h2 class="subtitulo">¿Qué es PLEXO?</h2>
+            <h2 class="subtitulo" data-aos="fade-up">¿Qué es PLEXO?</h2>
 
             <article>
                 <div id="carouselPlexo" class="carousel slide" data-bs-ride="carousel">
@@ -164,7 +167,7 @@
 
         <section>
 
-            <h3 class="subtitulo">¿Por qué practicar Pole Sport?</h3>
+            <h3 class="subtitulo" data-aos="fade-left">¿Por qué practicar Pole Sport?</h3>
 
     <!-- Cinta de imágenes animada -->
     <div class="cinta-pole">
@@ -239,6 +242,17 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Librería AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- Inicialización de AOS -->
+<script>
+    AOS.init({
+        duration: 700,
+        once: true,
+        offset: 100
+    });
+</script>
 
 </body>
 

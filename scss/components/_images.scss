@@ -1,3 +1,5 @@
+@use "../utilities/mixins";
+
 .imagen_cuatro {
     text-align: left;
 
@@ -20,9 +22,7 @@
 }
 
 .imagen_duo img {
-    width: 100%;
-    height: auto;
-    display: block;
+   @include mixins.imagen-responsive;
 }
 
 .imagen_vic {
@@ -39,11 +39,10 @@
 }
 
 .imagen_clases img {
-    width: 100%;
+    @include mixins.imagen-responsive;
     max-width: 100%;
-    height: auto;
-    display: block;
 }
+
 
 .galeria-pole {
     display: flex;
@@ -58,9 +57,7 @@
     min-width: 0;
 
     img {
-        display: block;
-        width: 100%;
-        height: auto;
+        @include mixins.imagen-responsive;
     }
 }
 
