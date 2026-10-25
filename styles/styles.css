@@ -59,6 +59,23 @@ figcaption {
   padding: 5px;
 }
 
+@media (max-width: 767px) {
+  .titulo_principal {
+    font-size: 30px;
+  }
+  .subtitulo {
+    font-size: 28px;
+  }
+  .texto_header {
+    font-size: 18px;
+  }
+  .texto_general {
+    font-size: 14px;
+  }
+  figcaption {
+    font-size: 14px;
+  }
+}
 header {
   background-color: #000;
   width: 100%;
@@ -66,12 +83,22 @@ header {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  header {
+    padding: 12px;
+  }
+}
 .pie_pagina {
   background-color: #a5833f;
   width: 100%;
   padding: 10px;
 }
 
+@media (max-width: 767px) {
+  .pie_pagina {
+    padding: 8px;
+  }
+}
 .navbar {
   padding: 5px;
   background-color: #000;
@@ -171,6 +198,13 @@ header {
   outline-offset: 3px;
 }
 
+@media (max-width: 767px) {
+  .boton-plexo,
+  .boton-plexo--contorno {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 /* CAROUSEL */
 .carousel-control-prev,
 .carousel-control-next {
@@ -193,6 +227,7 @@ header {
 
 /* ACCORDION */
 .accordion-button {
+  animation: aparecer-suave 0.5s ease both;
   transition: all 0.3s ease;
 }
 .accordion-button:hover {
@@ -208,6 +243,16 @@ header {
   color: #fff;
 }
 
+@keyframes aparecer-suave {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .imagen_cuatro {
   text-align: left;
 }
@@ -247,9 +292,9 @@ header {
 
 .imagen_clases img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
+  max-width: 100%;
 }
 
 .galeria-pole {
@@ -265,9 +310,9 @@ header {
   min-width: 0;
 }
 .imagen_vic img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .cinta-pole {

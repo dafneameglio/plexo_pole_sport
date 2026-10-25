@@ -65,3 +65,11 @@
         outline-offset: 3px;
     }
 }
+
+@media (max-width: 767px) {
+    .boton-plexo,
+    .boton-plexo--contorno {
+        max-width: 100%;
+        text-align: center;
+    }
+}

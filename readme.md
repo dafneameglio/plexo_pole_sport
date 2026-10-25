@@ -16,7 +16,7 @@ El sitio presenta información sobre las clases y actividades de PLEXO Pole Spor
 Desde una terminal:
 
 ```bash
-git clone https://github.com/IvanContrerasDev/plexo_pole_sport.git
+git clone https://github.com/dafneameglio/plexo_pole_sport.git
 ```
 
 Luego ingresar a la carpeta del proyecto:
@@ -27,14 +27,16 @@ cd plexo_pole_sport
 
 ### Ejecutar el proyecto
 
+El proyecto está desarrollado con HTML, CSS y SCSS. No requiere instalación de dependencias de JavaScript.
 
-### Ejecutar el proyecto
+Para visualizarlo, se puede abrir `index.html` en un navegador o utilizar una extensión como Live Server desde Visual Studio Code.
 
-El proyecto está desarrollado con HTML y CSS, por lo que no requiere instalación de dependencias.
+Para compilar automáticamente los cambios de SCSS durante el desarrollo, ejecutar desde la raíz del proyecto:
 
-Se puede abrir directamente el archivo `index.html` en un navegador o utilizar una extensión como **Live Server** desde Visual Studio Code.
+```bash
+sass --watch scss/main.scss styles/styles.css
+```
 
----
 
 # Páginas evaluadas
 
@@ -200,27 +202,31 @@ Se puede comprobar especialmente el comportamiento antes y después de los break
 
 # Estructura del proyecto
 
-```text
+
 plexo_pole_sport/
 │
 ├── index.html
-│
 ├── pages/
 │   ├── sobre_nosotros.html
 │   ├── clases.html
 │   ├── faq.html
 │   └── contacto.html
 │
+├── scss/
+│   ├── main.scss
+│   ├── utilities/
+│   ├── base/
+│   ├── layout/
+│   └── components/
+│
 ├── styles/
-│   └── styles.css
+│   ├── styles.css
+│   └── styles.css.map
 │
 ├── images/
 │   └── ...
 │
-└── README.md
-```
-
----
+└── readme.md
 
 ## Tecnologías utilizadas
 
@@ -275,3 +281,48 @@ y el uso de CSS Grid en las páginas evaluadas.
   de Straps mediante el breakpoint de 768px.
 - `css-breakpoint-1024px.png`: implementación del breakpoint
   de 1024px mediante `@media`.
+
+## Animaciones y efectos visuales
+
+El proyecto incorpora animaciones para mejorar la experiencia visual y acompañar la navegación por el sitio.
+
+### Librería AOS
+
+Se utiliza la librería AOS (*Animate On Scroll*) para aplicar animaciones a elementos cuando aparecen en el área visible de la pantalla.
+
+La configuración incluye una duración de 700 milisegundos, la ejecución de las animaciones una sola vez y un desplazamiento de 100 píxeles.
+
+Los efectos se aplican mediante atributos `data-aos`, utilizando animaciones como `fade-up`, `fade-left` y `zoom-in`.
+
+### Animaciones con CSS y SCSS
+
+También se utilizan transiciones CSS para generar efectos en botones, controles del carrusel y elementos interactivos.
+
+Se incorporan animaciones nativas mediante `@keyframes`, combinando propiedades como `opacity` y `transform` para producir efectos de aparición y desplazamiento.
+
+### Diseño responsive
+
+El sitio contempla ajustes para pantallas pequeñas mediante media queries. Se adaptan los tamaños tipográficos y los espacios interiores del encabezado, pie de página y botones.
+
+El diseño se verificó en anchos de pantalla de 360, 768, 1024 y 1440 píxeles.
+
+## Arquitectura SCSS
+
+Los estilos del proyecto se organizan mediante SCSS, utilizando parciales para separar las responsabilidades del código.
+
+La carpeta `scss/` contiene:
+
+- `utilities/`: variables y mixins reutilizables.
+- `base/`: estilos generales y tipografía.
+- `layout/`: estilos de encabezado, pie de página y navegación.
+- `components/`: estilos de botones, tarjetas, imágenes y grillas.
+
+El archivo `scss/main.scss` importa los parciales mediante `@use` y funciona como punto de entrada para compilar los estilos.
+
+### Compilación de SCSS
+
+El archivo fuente `scss/main.scss` se compila en `styles/styles.css`, que es la hoja de estilos utilizada por las páginas HTML.
+
+Para compilar automáticamente los cambios durante el desarrollo, ejecutar desde la raíz del proyecto:
+
+`sass --watch scss/main.scss styles/styles.css`

@@ -24,6 +24,7 @@
 /* ACCORDION */
 
 .accordion-button {
+    animation: aparecer-suave 0.5s ease both;
     transition: all 0.3s ease;
 
     &:hover {
@@ -39,5 +40,17 @@
     &:active {
         background-color: variables.$color-secundario;
         color: variables.$color-blanco;
+    }
+}
+
+@keyframes aparecer-suave {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
