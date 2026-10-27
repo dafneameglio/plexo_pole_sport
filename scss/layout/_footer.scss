@@ -1,9 +1,16 @@
 @use "../utilities/variables";
 
 .pie_pagina {
-    background-color: variables.$color-acento;
+    
+background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #000000 20%,
+    variables.$color-secundario 100%
+);
+
     width: 100%;
-    padding: 10px;
+    padding: 0px;
 }
 
 @media (max-width: 767px) {

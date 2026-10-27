@@ -1,18 +1,17 @@
 @use "../utilities/variables";
 /* MAIN */
 
+
 .contenido_principal {
-    background: linear-gradient(
-        to top,
-        variables.$color-primario,
-        variables.$color-secundario,
-    );
+    background: #000000;
+    color: #f5f0e6;
     padding: 10px;
     margin: 20px auto;
     width: 100%;
     height: 100%;
     align-content: center;
 }
+
 
 section article ul {
     align-self: flex-start;
@@ -46,35 +45,48 @@ section article ul {
     }
 }
 
-.imagen_coty { grid-area: imagen_coty; }
-.imagen_fede { grid-area: imagen_fede; }
-.imagen_mar { grid-area: imagen_mar; }
+.imagen_coty {
+    grid-area: imagen_coty;
+}
+
+.imagen_fede {
+    grid-area: imagen_fede;
+}
+
+.imagen_mar {
+    grid-area: imagen_mar;
+}
 
 /* GRID - CONTENEDOR PROFES */
 
 .contenedor {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1.7fr 1.3fr 1.7fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
         "imagen_uno imagen_dos imagen_cuatro"
         "imagen_uno imagen_tres imagen_cuatro";
-    gap: 5px;
+    gap: 0px;
     width: 100%;
     margin: 20px auto;
     padding: 0;
 
     img {
-        width: 80%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
+}
+
 .imagen_uno_josu {
     grid-area: imagen_uno;
     background-color: variables.$color-negro;
+}
+.imagen_uno_josu img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .imagen_dos_daf {
@@ -113,9 +125,17 @@ section article ul {
     width: 100%;
 }
 
-.sofi_polesport { grid-area: sofi_polesport; }
-.josu_polesport { grid-area: josu_polesport; }
-.lu_polesport { grid-area: lu_polesport; }
+.sofi_polesport {
+    grid-area: sofi_polesport;
+}
+
+.josu_polesport {
+    grid-area: josu_polesport;
+}
+
+.lu_polesport {
+    grid-area: lu_polesport;
+}
 
 /* IMÁGENES DE MODALIDADES */
 
@@ -252,9 +272,17 @@ section article ul {
         background-color: variables.$color-negro;
     }
 
-    .lu_polesport { grid-area: lu_polesport; }
-    .josu_polesport { grid-area: josu_polesport; }
-    .sofi_polesport { grid-area: sofi_polesport; }
+    .lu_polesport {
+        grid-area: lu_polesport;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+    }
 
     .modalidad_flexi {
         grid-template-columns: 1fr 2fr;
@@ -350,10 +378,21 @@ section article ul {
         background-color: variables.$color-negro;
     }
 
-    .lu_polesport { grid-area: lu_polesport; }
-    .josu_polesport { grid-area: josu_polesport; }
-    .sofi_polesport { grid-area: sofi_polesport; }
-    .fran_polesport { grid-area: fran_polesport; }
+    .lu_polesport {
+        grid-area: lu_polesport;
+    }
+
+    .josu_polesport {
+        grid-area: josu_polesport;
+    }
+
+    .sofi_polesport {
+        grid-area: sofi_polesport;
+    }
+
+    .fran_polesport {
+        grid-area: fran_polesport;
+    }
 
     .vale_flexi {
         display: block;

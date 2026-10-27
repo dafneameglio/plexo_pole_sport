@@ -1,6 +1,11 @@
 @use "../utilities/variables";
 
 .titulo_principal {
+    
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
     color: variables.$color-primario;
     text-align: center;
     font-size: 40px;
@@ -8,7 +13,7 @@
 }
 
 .subtitulo {
-    color: variables.$color-negro;
+    color: variables.$color-secundario;
     align-self: flex-start;
     font-size: 40px;
     font-weight: 700;
@@ -16,7 +21,7 @@
 }
 
 .texto_general {
-    color: variables.$color-negro;
+    color: variables.$color-primario;
     font-size: 15px;
     font-weight: 400;
     padding: 10px;
@@ -30,9 +35,13 @@
     padding: 10px;
 }
 
+p{
+    color: variables.$color-primario;
+    
+}
 figcaption {
     font-size: 15px;
-    color: variables.$color-negro;
+    color: variables.$color-primario;
     padding: 5px;
 }
 

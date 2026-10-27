@@ -6,9 +6,14 @@
 }
 
 body {
-  background: #c1a669;
+  background-color: #000000;
+  color: #f5f0e6;
   font-family: "Abel", sans-serif;
   padding: 0;
+}
+
+main {
+  background-color: #000000;
 }
 
 section {
@@ -24,6 +29,10 @@ section article {
 }
 
 .titulo_principal {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
   color: #c1a669;
   text-align: center;
   font-size: 40px;
@@ -31,15 +40,15 @@ section article {
 }
 
 .subtitulo {
-  color: #000;
+  color: #9b7437;
   align-self: flex-start;
   font-size: 40px;
   font-weight: 700;
-  border-bottom: 2px solid #946c2e;
+  border-bottom: 2px solid #9b7437;
 }
 
 .texto_general {
-  color: #000;
+  color: #c1a669;
   font-size: 15px;
   font-weight: 400;
   padding: 10px;
@@ -53,9 +62,13 @@ section article {
   padding: 10px;
 }
 
+p {
+  color: #c1a669;
+}
+
 figcaption {
   font-size: 15px;
-  color: #000;
+  color: #c1a669;
   padding: 5px;
 }
 
@@ -77,21 +90,21 @@ figcaption {
   }
 }
 header {
-  background-color: #000;
+  background: linear-gradient(180deg, #000000 0%, #000000 20%, #9b7437 100%);
   width: 100%;
-  padding: 20px;
-  margin: 0 auto;
+  padding: 20px 0;
+  margin: 0;
 }
 
 @media (max-width: 767px) {
   header {
-    padding: 12px;
+    padding: 12px 0;
   }
 }
 .pie_pagina {
-  background-color: #a5833f;
+  background: linear-gradient(180deg, #000000 0%, #000000 20%, #9b7437 100%);
   width: 100%;
-  padding: 10px;
+  padding: 0px;
 }
 
 @media (max-width: 767px) {
@@ -101,7 +114,7 @@ header {
 }
 .navbar {
   padding: 5px;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .lista_navbar {
@@ -120,16 +133,16 @@ header {
   transition: all 0.3s ease;
 }
 .navbar .nav-link:hover {
-  color: #fff;
+  color: #ffffff;
 }
-.navbar .nav-link:focus {
-  color: #fff;
+.navbar .nav-link:focus-visible {
+  color: #ffffff;
 }
 .navbar .nav-link.active {
   color: #c1a669;
 }
 .navbar .nav-link:active {
-  color: #946c2e;
+  color: #9b7437;
 }
 
 .navbar .navbar-toggler {
@@ -139,7 +152,7 @@ header {
   border-color: #c1a669;
   transform: scale(1.05);
 }
-.navbar .navbar-toggler:focus {
+.navbar .navbar-toggler:focus-visible {
   border-color: #c1a669;
   box-shadow: 0 0 0 0.2rem rgba(193, 166, 105, 0.25);
 }
@@ -148,8 +161,8 @@ header {
 }
 
 .boton-plexo {
-  background-color: #946c2e;
-  color: #fff;
+  background-color: #9b7437;
+  color: #ffffff;
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -160,7 +173,7 @@ header {
   font-size: 1.125rem;
 }
 .boton-plexo:hover {
-  background-color: #a5833f;
+  background-color: #8a6a30;
   transform: translateY(-2px);
 }
 .boton-plexo:focus-visible {
@@ -172,7 +185,7 @@ header {
 }
 
 .boton-plexo--contorno {
-  border: 2px solid #946c2e;
+  border: 2px solid #9b7437;
   border-radius: 0.4rem;
 }
 
@@ -180,14 +193,14 @@ header {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: transparent;
-  color: #946c2e;
+  color: #9b7437;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .boton-plexo--contorno:hover {
-  background-color: #946c2e;
-  color: #fff;
+  background-color: #9b7437;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 .boton-plexo--contorno:active {
@@ -215,8 +228,8 @@ header {
   opacity: 1;
   transform: scale(1.1);
 }
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
   outline: 2px solid #c1a669;
   outline-offset: 3px;
 }
@@ -231,16 +244,16 @@ header {
   transition: all 0.3s ease;
 }
 .accordion-button:hover {
-  color: #000;
+  color: #000000;
   background-color: #d8c99d;
 }
-.accordion-button:focus {
-  color: #000;
+.accordion-button:focus-visible {
+  color: #000000;
   box-shadow: 0 0 0 0.2rem rgba(193, 166, 105, 0.25);
 }
 .accordion-button:active {
-  background-color: #946c2e;
-  color: #fff;
+  background-color: #9b7437;
+  color: #ffffff;
 }
 
 @keyframes aparecer-suave {
@@ -369,7 +382,8 @@ header {
 }
 /* MAIN */
 .contenido_principal {
-  background: linear-gradient(to top, #c1a669, #946c2e);
+  background: #000000;
+  color: #f5f0e6;
   padding: 10px;
   margin: 20px auto;
   width: 100%;
@@ -419,40 +433,45 @@ section article ul {
 /* GRID - CONTENEDOR PROFES */
 .contenedor {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1.7fr 1.3fr 1.7fr;
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "imagen_uno imagen_dos imagen_cuatro" "imagen_uno imagen_tres imagen_cuatro";
-  gap: 5px;
+  gap: 0px;
   width: 100%;
   margin: 20px auto;
   padding: 0;
 }
 .contenedor img {
-  width: 80%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
 .imagen_uno_josu {
   grid-area: imagen_uno;
-  background-color: #000;
+  background-color: #000000;
+}
+
+.imagen_uno_josu img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .imagen_dos_daf {
   grid-area: imagen_dos;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .imagen_tres_agus {
   grid-area: imagen_tres;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .imagen_cuatro_mili {
   grid-area: imagen_cuatro;
-  background-color: #000;
+  background-color: #000000;
 }
 
 /* GRID - MODALIDAD SPORT */
@@ -507,17 +526,17 @@ section article ul {
 
 .mili_flexi {
   grid-area: mili_flexi;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .josu_flexi {
   grid-area: josu_flexi;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .agus_flexi {
   grid-area: agus_flexi;
-  background-color: #000;
+  background-color: #000000;
 }
 
 /* GRID - MODALIDAD LIBRE */
@@ -532,17 +551,17 @@ section article ul {
 
 .duo_libre1 {
   grid-area: duo_libre1;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .duo_libre2 {
   grid-area: duo_libre2;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .duo_libre3 {
   grid-area: duo_libre3;
-  background-color: #000;
+  background-color: #000000;
 }
 
 /* GRID - MODALIDAD STRAPS */
@@ -557,17 +576,17 @@ section article ul {
 
 .lu_straps {
   grid-area: lu_straps;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .lucas_straps {
   grid-area: lucas_straps;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .daf_straps {
   grid-area: daf_straps;
-  background-color: #000;
+  background-color: #000000;
 }
 
 /* BREAKPOINT TABLET: 768px */
@@ -594,7 +613,7 @@ section article ul {
   .lu_polesport,
   .josu_polesport,
   .sofi_polesport {
-    background-color: #000;
+    background-color: #000000;
   }
   .lu_polesport {
     grid-area: lu_polesport;
@@ -620,7 +639,7 @@ section article ul {
   }
   .duo_libre4 {
     grid-area: duo_libre4;
-    background-color: #000;
+    background-color: #000000;
   }
   .modalidad_straps {
     grid-template-columns: 1fr 2fr;
@@ -637,19 +656,19 @@ section article ul {
   }
   .imagen_fer {
     grid-area: imagen_fer;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_mar {
     grid-area: imagen_mar;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_fede {
     grid-area: imagen_fede;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_coty {
     grid-area: imagen_coty;
-    background-color: #000;
+    background-color: #000000;
   }
 }
 /* BREAKPOINT DESKTOP: 1024px */
@@ -670,7 +689,7 @@ section article ul {
   .josu_polesport,
   .sofi_polesport,
   .fran_polesport {
-    background-color: #000;
+    background-color: #000000;
   }
   .lu_polesport {
     grid-area: lu_polesport;
@@ -694,7 +713,7 @@ section article ul {
   }
   .vale_flexi {
     grid-area: vale_flexi;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_agus,
   .imagen_fede {
@@ -708,23 +727,23 @@ section article ul {
   }
   .imagen_agus {
     grid-area: imagen_agus;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_fer {
     grid-area: imagen_fer;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_mar {
     grid-area: imagen_mar;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_fede {
     grid-area: imagen_fede;
-    background-color: #000;
+    background-color: #000000;
   }
   .imagen_coty {
     grid-area: imagen_coty;
-    background-color: #000;
+    background-color: #000000;
   }
 }
 

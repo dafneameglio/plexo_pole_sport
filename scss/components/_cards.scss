@@ -11,10 +11,10 @@
         transform: scale(1.1);
     }
 
-    &:focus {
-        outline: 2px solid variables.$color-primario;
-        outline-offset: 3px;
-    }
+    &:focus-visible {
+    outline: 2px solid variables.$color-primario;
+    outline-offset: 3px;
+}
 
     &:active {
         transform: scale(0.95);
@@ -32,7 +32,7 @@
         background-color: variables.$color-hover-accordion;
     }
 
-    &:focus {
+    &:focus-visible {
         color: variables.$color-negro;
         box-shadow: 0 0 0 0.2rem variables.$sombra-focus;
     }

@@ -1,14 +1,21 @@
+
 @use "../utilities/variables";
 
 header {
-    background-color: variables.$color-negro;
+    background: linear-gradient(
+        180deg,
+        #000000 0%,
+        #000000 20%,
+        variables.$color-secundario 100%, 
+    );
+
     width: 100%;
-    padding: 20px;
-    margin: 0 auto;
+    padding: 20px 0;
+    margin: 0;
 }
 
 @media (max-width: 767px) {
     header {
-        padding: 12px;
+        padding: 12px 0;
     }
 }
