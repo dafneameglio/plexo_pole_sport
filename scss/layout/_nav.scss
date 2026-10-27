@@ -16,6 +16,8 @@
     margin-right: auto;
 }
 
+
+
 .navbar .nav-link {
     color: variables.$color-primario;
     transition: all 0.3s ease;
@@ -24,7 +26,7 @@
         color: variables.$color-blanco;
     }
 
-    &:focus {
+    &:focus-visible {
         color: variables.$color-blanco;
     }
 
@@ -45,7 +47,7 @@
         transform: scale(1.05);
     }
 
-    &:focus {
+    &:focus-visible {
         border-color: variables.$color-primario;
         box-shadow: 0 0 0 0.2rem variables.$sombra-focus;
     }
