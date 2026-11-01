@@ -28,6 +28,78 @@ section article {
   padding: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enlaces de la sección de contacto */
+.seccion_contacto article a {
+  color: #e8dcc0;
+  text-decoration: none;
+  border-bottom: 1px solid #c1a669;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.seccion_contacto article a:hover {
+  color: #c1a669;
+  border-bottom-color: #e8dcc0;
+}
+.seccion_contacto article a:focus-visible {
+  outline: 2px solid #c1a669;
+  outline-offset: 4px;
+}
+
+/* Alineación del contenido de las secciones de contacto */
+.seccion_contacto article {
+  text-align: left;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+.formulario-contacto .campo-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+.formulario-contacto .campo-contacto label {
+  color: #e8dcc0;
+  font-size: 1.1rem;
+}
+.formulario-contacto .campo-contacto input,
+.formulario-contacto .campo-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111111;
+  color: #e8dcc0;
+  border: 1px solid #946c2e;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+.formulario-contacto .campo-contacto input:focus,
+.formulario-contacto .campo-contacto textarea:focus {
+  outline: 2px solid #c1a669;
+  outline-offset: 2px;
+  border-color: #c1a669;
+}
+.formulario-contacto .campo-contacto textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.formulario-contacto button {
+  align-self: flex-start;
+}
+
 .titulo_principal {
   padding: 0.5rem 1rem;
   margin-top: 1rem;
@@ -102,7 +174,7 @@ header {
   }
 }
 .pie_pagina {
-  background: linear-gradient(180deg, #000000 0%, #000000 20%, #9b7437 100%);
+  background: linear-gradient(180deg, #9b7437 0%, #000000 80%, #000000 100%);
   width: 100%;
   padding: 0px;
 }
@@ -218,6 +290,77 @@ header {
     text-align: center;
   }
 }
+.boton-volver-arriba {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #000000;
+  color: #c1a669;
+  border: 1px solid #c1a669;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.boton-volver-arriba:hover {
+  background-color: #c1a669;
+  color: #000000;
+  transform: translateY(-4px);
+}
+.boton-volver-arriba:focus-visible {
+  outline: 2px solid #c1a669;
+  outline-offset: 4px;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.formulario-contacto .campo-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+.formulario-contacto .campo-contacto label {
+  color: #e8dcc0;
+  font-size: 1.1rem;
+}
+.formulario-contacto .campo-contacto input,
+.formulario-contacto .campo-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111111;
+  color: #e8dcc0;
+  border: 1px solid #946c2e;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+.formulario-contacto .campo-contacto input:focus,
+.formulario-contacto .campo-contacto textarea:focus {
+  outline: 2px solid #c1a669;
+  outline-offset: 2px;
+  border-color: #c1a669;
+}
+.formulario-contacto .campo-contacto textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.formulario-contacto button {
+  align-self: flex-start;
+}
+
 /* CAROUSEL */
 .carousel-control-prev,
 .carousel-control-next {
@@ -343,8 +486,8 @@ header {
 .cinta-pole img {
   display: block;
   flex: 0 0 220px;
-  width: 220px;
-  height: 290px;
+  width: 270px;
+  height: 340px;
   object-fit: contain;
 }
 

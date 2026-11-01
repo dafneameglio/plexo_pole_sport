@@ -44,6 +44,7 @@
 }
 
 
+
 .galeria-pole {
     display: flex;
     flex-direction: column;
@@ -77,8 +78,8 @@
     img {
     display: block;
     flex: 0 0 220px;
-    width: 220px;
-    height: 290px;
+    width: 270px;
+    height: 340px;
     object-fit: contain;
 }
 }

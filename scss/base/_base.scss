@@ -29,3 +29,82 @@ section article {
     align-items: center;
     padding: 20px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enlaces de la sección de contacto */
+.seccion_contacto article a {
+    color: #e8dcc0;
+    text-decoration: none;
+    border-bottom: 1px solid #c1a669;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        color: #c1a669;
+        border-bottom-color: #e8dcc0;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #c1a669;
+        outline-offset: 4px;
+    }
+}
+
+/* Alineación del contenido de las secciones de contacto */
+.seccion_contacto article {
+    text-align: left;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: left;
+
+    .campo-contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: left;
+
+        label {
+            color: #e8dcc0;
+            font-size: 1.1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #111111;
+            color: #e8dcc0;
+            border: 1px solid #946c2e;
+            border-radius: 6px;
+            font: inherit;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: 2px solid #c1a669;
+                outline-offset: 2px;
+                border-color: #c1a669;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+    }
+
+    button {
+        align-self: flex-start;
+    }
+}

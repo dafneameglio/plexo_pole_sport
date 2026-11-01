@@ -4,9 +4,10 @@
     
 background: linear-gradient(
     180deg,
-    #000000 0%,
-    #000000 20%,
-    variables.$color-secundario 100%
+    variables.$color-secundario 0%,
+    #000000 80%,
+    #000000 100%
+
 );
 
     width: 100%;
