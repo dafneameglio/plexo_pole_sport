@@ -21,6 +21,9 @@
     <title>Sobre Nosotros | Plexo Pole Sport</title>
     <meta name="description"
         content="Conocé PLEXO Pole Sport, un espacio dedicado al aprendizaje y la práctica del Pole Sport, donde desarrollás habilidades físicas y artísticas.">
+
+    <meta name="keywords"
+        content="PLEXO Córdoba, estudio de Pole Sport Córdoba, profesores de Pole Sport, comunidad Pole Sport, entrenamiento de Pole Sport, espacio de Pole Sport">
 </head>
 
 <body id="inicio">
@@ -34,7 +37,7 @@
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="../index.html">
-                    <img class="logo" src="../images/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
+                    <img class="logo" src="../assets/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
                 </a>
 
                 <!-- Botón hamburguesa -->
@@ -101,9 +104,18 @@
 
 
             <p class="texto_general">
-                Nos basamos en la colaboración horizontal y el intercambio de conocimientos. Creemos que la
-                innovación nace en la intersección de diferentes disciplinas, rompiendo las estructuras
-                tradicionales de trabajo para construir un entorno más flexible, dinámico y humano.
+                En PLEXO creemos que el Pole Sport es mucho más que una disciplina física: es una forma de movimiento,
+                expresión y superación personal.
+
+                Buscamos crear un espacio donde cada persona pueda descubrir sus capacidades, desarrollar fuerza y
+                flexibilidad, y avanzar a su propio ritmo, sin comparaciones ni exigencias ajenas.
+
+                Valoramos el compañerismo, el respeto y el aprendizaje compartido. Nos interesa que cada alumno se
+                sienta acompañado, encuentre confianza en sí mismo y disfrute del proceso, celebrando cada pequeño
+                logro.
+
+                Nuestra filosofía es crecer en movimiento, construir una comunidad y demostrar que cada cuerpo tiene su
+                propia manera de expresarse.
             </p>
 
 
@@ -119,24 +131,24 @@
                 <div class="contenedor">
 
                     <div class="imagen_uno_josu">
-                        <img src="../images/josu_pole_sport.jpeg"
+                        <img src="../assets/josu_pole_sport.jpeg"
                             alt="Atleta realizando una figura de Pole Sport llamada handspring" data-aos="fade-up"
                             data-aos-duration="700">
                     </div>
 
                     <div class="imagen_dos_daf">
-                        <img src="../images/dafne_pole_sport.jpg"
+                        <img src="../assets/dafne_pole_sport.jpg"
                             alt="Atleta realizando una figura de Pole Sport llamada diva" data-aos="fade-up"
                             data-aos-duration="700">
                     </div>
 
                     <div class="imagen_tres_agus">
-                        <img src="../images/agus_pole_sport_02.jpeg"
+                        <img src="../assets/agus_pole_sport_02.jpeg"
                             alt="Atleta realizando una figura de Pole Sport llamada vertical" data-aos="fade-up"
                             data-aos-duration="700">
                     </div>
                     <div class="imagen_cuatro_mili">
-                        <img src="../images/mili_pole_sport.jpeg"
+                        <img src="../assets/mili_pole_sport.jpeg"
                             alt="Atleta realizando una figura de Pole Sport llamada satelite" data-aos="fade-up"
                             data-aos-duration="700">
                     </div>
@@ -160,11 +172,11 @@
     <footer class="pie_pagina">
 
         <p class="texto_general">
-            &copy; 2024 Plexo Pole Sport. Todos los derechos reservados.
+            &copy; 2026 Plexo Pole Sport. Todos los derechos reservados.
         </p>
 
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/plexo.polesport/" target="_blank">Instagram</a>
+        
 
     </footer>
     <!-- Bootstrap JS -->
@@ -177,31 +189,19 @@
         AOS.init({
             duration: 700,
             once: true,
-            offset: 100
+            offset: 100,
+            disable: function () {
+                return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            }
         });
     </script>
-<a
-    href="#inicio"
-    class="boton-volver-arriba"
-    aria-label="Volver arriba"
-    title="Volver arriba"
->
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="26"
-        height="26"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-    >
-        <path d="m17 11-5-5-5 5" />
-        <path d="m17 18-5-5-5 5" />
-    </svg>
-</a>
+    <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m17 11-5-5-5 5" />
+            <path d="m17 18-5-5-5 5" />
+        </svg>
+    </a>
 
 </body>
 

@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="../styles/styles.css">
 
     <title>Preguntas frecuentes sobre Pole Sport | PLEXO</title>
-    <meta name="description" content="Encontrá respuestas a las preguntas frecuentes sobre las clases de Pole Sport en PLEXO, los entrenamientos, los requisitos y cómo comenzar.">
+    <meta name="description"
+        content="Encontrá respuestas a las preguntas frecuentes sobre las clases de Pole Sport en PLEXO, los entrenamientos, los requisitos y cómo comenzar.">
+    <meta name="keywords"
+        content="preguntas frecuentes Pole Sport, empezar Pole Sport Córdoba, clases para principiantes Córdoba, requisitos para Pole Sport, clase de prueba Pole Sport, recuperar clases PLEXO">
 </head>
 
 <body id="inicio">
@@ -28,52 +31,52 @@
 
         <nav class="navbar navbar-expand-lg">
 
-    <div class="container-fluid">
+            <div class="container-fluid">
 
-        <a class="navbar-brand" href="../index.html">
-            <img class="logo" src="../images/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
-        </a>
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo" src="../assets/logo_plexo.webp" alt="Logo de Plexo Pole Sport">
+                </a>
 
-        <!-- Botón hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPlexo"
-            aria-controls="navbarPlexo" aria-expanded="false" aria-label="Abrir menú">
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPlexo"
+                    aria-controls="navbarPlexo" aria-expanded="false" aria-label="Abrir menú">
 
-            <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
 
-        </button>
+                </button>
 
-        <!-- Menú -->
-        <div class="collapse navbar-collapse" id="navbarPlexo">
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarPlexo">
 
-            <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Inicio</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="clases.html">Clases</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clases.html">Clases</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="faq.html">FAQ</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
 
-            </ul>
+                    </ul>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
 
-</nav>
+        </nav>
 
         <h1 class="titulo_principal">Preguntas frecuentes</h1>
 
@@ -89,6 +92,7 @@
     <main class="contenido_principal">
 
         <section>
+            <h2 class="subtitulo">Resolvemos tus dudas</h2>
 
             <div class="accordion" id="accordionPlexo">
 
@@ -212,7 +216,7 @@
             <div class="imagen_cuatro">
                 <figure>
 
-                    <img src="../images/vista_exterior_plexo.jpeg"
+                    <img src="../assets/vista_exterior_plexo.jpeg"
                         alt="Imagen del gimnasio de Plexo Pole Sport, mostrando el espacio de entrenamiento">
 
                     <figcaption>
@@ -233,8 +237,8 @@
             &copy; 2026 Plexo Pole Sport. Todos los derechos reservados.
         </p>
 
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href=" https://www.instagram.com/plexo.polesport/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        
 
     </footer>
     <!-- Bootstrap JS -->
@@ -242,37 +246,25 @@
 
     <!-- Librería AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
+
     <script>
         AOS.init({
             duration: 700,
             once: true,
-            offset: 100
+            offset: 100,
+            disable: function () {
+                return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            }
         });
     </script>
 
-    <a
-    href="#inicio"
-    class="boton-volver-arriba"
-    aria-label="Volver arriba"
-    title="Volver arriba"
->
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="26"
-        height="26"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-    >
-        <path d="m17 11-5-5-5 5" />
-        <path d="m17 18-5-5-5 5" />
-    </svg>
-</a>
+    <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba" title="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m17 11-5-5-5 5" />
+            <path d="m17 18-5-5-5 5" />
+        </svg>
+    </a>
 
 
 </body>

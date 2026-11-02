@@ -20,7 +20,7 @@
 
 .navbar .nav-link {
     color: variables.$color-primario;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
         color: variables.$color-blanco;
@@ -40,7 +40,7 @@
 }
 
 .navbar .navbar-toggler {
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
         border-color: variables.$color-primario;

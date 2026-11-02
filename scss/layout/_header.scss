@@ -4,9 +4,9 @@
 header {
     background: linear-gradient(
         180deg,
-        #000000 0%,
-        #000000 20%,
-        variables.$color-secundario 100%, 
+        variables.$color-negro 0%,
+        variables.$color-negro 20%,
+        variables.$color-secundario 100%
     );
 
     width: 100%;

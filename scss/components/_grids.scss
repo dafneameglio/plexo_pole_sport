@@ -1,60 +1,20 @@
+
 @use "../utilities/variables";
+
 /* MAIN */
 
-
 .contenido_principal {
-    background: #000000;
+    background-color: variables.$color-negro;
     color: #f5f0e6;
     padding: 10px;
     margin: 20px auto;
     width: 100%;
-    height: 100%;
     align-content: center;
 }
-
 
 section article ul {
     align-self: flex-start;
     text-align: left;
-}
-
-/* GRID - INDEX */
-
-.imagen_fede,
-.imagen_agus {
-    display: none;
-}
-
-.contenedor_index {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 5px;
-    grid-template-areas:
-        "imagen_coty"
-        "imagen_fede"
-        "imagen_mar";
-    width: 100%;
-    padding: 0;
-
-    img {
-        width: 80%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-.imagen_coty {
-    grid-area: imagen_coty;
-}
-
-.imagen_fede {
-    grid-area: imagen_fede;
-}
-
-.imagen_mar {
-    grid-area: imagen_mar;
 }
 
 /* GRID - CONTENEDOR PROFES */
@@ -66,27 +26,28 @@ section article ul {
     grid-template-areas:
         "imagen_uno imagen_dos imagen_cuatro"
         "imagen_uno imagen_tres imagen_cuatro";
-    gap: 0px;
+    gap: 0;
     width: 100%;
     margin: 20px auto;
     padding: 0;
 
     img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .imagen_uno_josu {
     grid-area: imagen_uno;
     background-color: variables.$color-negro;
-}
-.imagen_uno_josu img {
-    object-fit: cover;
-    object-position: center;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .imagen_dos_daf {
@@ -108,8 +69,7 @@ section article ul {
 
 .fran_polesport,
 .vale_flexi,
-.duo_libre4,
-.agusq_straps {
+.duo_libre4 {
     display: none;
 }
 
@@ -239,6 +199,7 @@ section article ul {
 /* BREAKPOINT TABLET: 768px */
 
 @media (min-width: 768px) {
+
     .contenedor {
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-rows: 1fr 1fr;
@@ -270,18 +231,6 @@ section article ul {
     .josu_polesport,
     .sofi_polesport {
         background-color: variables.$color-negro;
-    }
-
-    .lu_polesport {
-        grid-area: lu_polesport;
-    }
-
-    .josu_polesport {
-        grid-area: josu_polesport;
-    }
-
-    .sofi_polesport {
-        grid-area: sofi_polesport;
     }
 
     .modalidad_flexi {
@@ -316,43 +265,12 @@ section article ul {
             "lucas_straps lu_straps"
             "daf_straps lu_straps";
     }
-
-    .imagen_fede {
-        display: block;
-    }
-
-    .contenedor_index {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "imagen_fer imagen_fede"
-            "imagen_mar imagen_coty";
-    }
-
-    .imagen_fer {
-        grid-area: imagen_fer;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_mar {
-        grid-area: imagen_mar;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_fede {
-        grid-area: imagen_fede;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_coty {
-        grid-area: imagen_coty;
-        background-color: variables.$color-negro;
-    }
 }
 
 /* BREAKPOINT DESKTOP: 1024px */
 
 @media (min-width: 1024px) {
+
     .titulo_principal {
         font-size: 60px;
     }
@@ -362,7 +280,6 @@ section article ul {
     }
 
     .modalidad_sport {
-        display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -376,22 +293,6 @@ section article ul {
     .sofi_polesport,
     .fran_polesport {
         background-color: variables.$color-negro;
-    }
-
-    .lu_polesport {
-        grid-area: lu_polesport;
-    }
-
-    .josu_polesport {
-        grid-area: josu_polesport;
-    }
-
-    .sofi_polesport {
-        grid-area: sofi_polesport;
-    }
-
-    .fran_polesport {
-        grid-area: fran_polesport;
     }
 
     .vale_flexi {
@@ -408,46 +309,6 @@ section article ul {
 
     .vale_flexi {
         grid-area: vale_flexi;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_agus,
-    .imagen_fede {
-        display: block;
-    }
-
-    .contenedor_index {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-            "imagen_mar imagen_coty"
-            "imagen_agus imagen_fer"
-            "imagen_fede imagen_fede";
-        gap: 5px;
-    }
-
-    .imagen_agus {
-        grid-area: imagen_agus;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_fer {
-        grid-area: imagen_fer;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_mar {
-        grid-area: imagen_mar;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_fede {
-        grid-area: imagen_fede;
-        background-color: variables.$color-negro;
-    }
-
-    .imagen_coty {
-        grid-area: imagen_coty;
         background-color: variables.$color-negro;
     }
 }

@@ -1,4 +1,3 @@
-
 @use "../utilities/variables";
 
 * {
@@ -8,14 +7,14 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: variables.$color-negro;
     color: #f5f0e6;
     font-family: 'Abel', sans-serif;
     padding: 0;
 }
 
 main {
-    background-color: #000000;
+    background-color: variables.$color-negro;
 }
 
 section {
@@ -95,6 +94,11 @@ html {
                 outline: 2px solid #c1a669;
                 outline-offset: 2px;
                 border-color: #c1a669;
+            }
+
+            &::placeholder {
+                color: #e8dcc0;
+                opacity: 1;
             }
         }
 

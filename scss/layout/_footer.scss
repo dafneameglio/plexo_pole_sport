@@ -1,17 +1,16 @@
+
 @use "../utilities/variables";
 
 .pie_pagina {
-    
-background: linear-gradient(
-    180deg,
-    variables.$color-secundario 0%,
-    #000000 80%,
-    #000000 100%
-
-);
+    background: linear-gradient(
+        180deg,
+        variables.$color-secundario 0%,
+        variables.$color-negro 80%,
+        variables.$color-negro 100%
+    );
 
     width: 100%;
-    padding: 0px;
+    padding: 0;
 }
 
 @media (max-width: 767px) {

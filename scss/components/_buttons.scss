@@ -1,12 +1,13 @@
+
 @use "../utilities/variables";
 @use "../utilities/mixins";
 
 // Estilos base para botones propios de PLEXO
 .boton-plexo {
     @include mixins.button-variant(
-        variables.$color-secundario,
-        variables.$color-blanco
-    );
+    #946c2e,
+    variables.$color-blanco
+);
 
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -15,12 +16,12 @@
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: 1rem + 0.125rem;
+    font-size: 1.125rem;
 
     &:hover {
-    background-color: #8a6a30;
-    transform: translateY(-2px);
-}
+        background-color: #8a6a30;
+        transform: translateY(-2px);
+    }
 
     &:focus-visible {
         outline: 2px solid variables.$color-primario;
@@ -51,7 +52,7 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-        background-color: variables.$color-secundario;
+        background-color: #946c2e;
         color: variables.$color-blanco;
         transform: translateY(-2px);
     }
@@ -66,6 +67,7 @@
     }
 }
 
+// Ajustes responsive para botones
 @media (max-width: 767px) {
     .boton-plexo,
     .boton-plexo--contorno {
@@ -74,7 +76,7 @@
     }
 }
 
-
+// Botón para volver al inicio
 .boton-volver-arriba {
     position: fixed;
     right: 20px;
@@ -88,9 +90,9 @@
     width: 48px;
     height: 48px;
 
-    background-color: #000000;
-    color: #c1a669;
-    border: 1px solid #c1a669;
+    background-color: variables.$color-negro;
+    color: variables.$color-primario;
+    border: 1px solid variables.$color-primario;
     border-radius: 50%;
 
     text-decoration: none;
@@ -102,62 +104,13 @@
         transform 0.3s ease;
 
     &:hover {
-        background-color: #c1a669;
-        color: #000000;
+        background-color: variables.$color-primario;
+        color: variables.$color-negro;
         transform: translateY(-4px);
     }
 
     &:focus-visible {
-        outline: 2px solid #c1a669;
+        outline: 2px solid variables.$color-primario;
         outline-offset: 4px;
-    }
-}
-
-
-.formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-
-    .campo-contacto {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: left;
-
-        label {
-            color: #e8dcc0;
-            font-size: 1.1rem;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: #111111;
-            color: #e8dcc0;
-            border: 1px solid #946c2e;
-            border-radius: 6px;
-            font: inherit;
-            box-sizing: border-box;
-
-            &:focus {
-                outline: 2px solid #c1a669;
-                outline-offset: 2px;
-                border-color: #c1a669;
-            }
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 140px;
-        }
-    }
-
-    button {
-        align-self: flex-start;
     }
 }

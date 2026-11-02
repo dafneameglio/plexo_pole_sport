@@ -25,18 +25,7 @@
    @include mixins.imagen-responsive;
 }
 
-.imagen_vic {
-    align-self: flex-start;
 
-    img {
-        width: 40%;
-        display: block;
-    }
-
-    figcaption {
-        text-align: left;
-    }
-}
 
 .imagen_clases img {
     @include mixins.imagen-responsive;
@@ -53,14 +42,21 @@
     min-width: 0;
 }
 
+
 .imagen_vic {
     width: 100%;
     min-width: 0;
+    align-self: flex-start;
 
     img {
         @include mixins.imagen-responsive;
     }
+
+    figcaption {
+        text-align: left;
+    }
 }
+
 
 .cinta-pole {
     width: 100%;
