@@ -2,37 +2,36 @@
 
 Sitio web desarrollado para **PLEXO Pole Sport** como proyecto final del curso Desarrollo Web de Coderhouse.
 
-El proyecto presenta información sobre el estudio, sus profesores, las clases y modalidades de entrenamiento, preguntas frecuentes y medios de contacto.
-
-Se desarrolló utilizando HTML5, SCSS, CSS y Bootstrap, con un enfoque **Mobile First**, diseño responsive y criterios de accesibilidad y SEO on-page.
+El sitio presenta información sobre el espacio, las clases y las actividades de PLEXO Pole Sport. Fue desarrollado con HTML5, CSS3 y SCSS, aplicando diseño responsive y el enfoque **Mobile First**.
 
 ## Sitio web
 
-**Sitio desplegado:** [Agregar URL de Vercel una vez realizado el despliegue]
+**Sitio publicado:** [https://plexopolesport.vercel.app/](https://plexopolesport.vercel.app/)
+
+**Repositorio:** [https://github.com/dafneameglio/plexo_pole_sport](https://github.com/dafneameglio/plexo_pole_sport)
 
 ## Páginas del sitio
 
-El proyecto está compuesto por cinco páginas HTML:
+El proyecto está compuesto por cinco páginas:
 
-- `index.html` — Página principal.
-- `pages/sobre_nosotros.html` — Información sobre PLEXO y sus profesores.
-- `pages/clases.html` — Clases y modalidades de entrenamiento.
-- `pages/faq.html` — Preguntas frecuentes.
-- `pages/contacto.html` — Información y formulario de contacto.
+- `index.html`: página principal.
+- `pages/sobre_nosotros.html`: información sobre PLEXO y su filosofía.
+- `pages/clases.html`: presentación de las clases y modalidades.
+- `pages/faq.html`: preguntas frecuentes.
+- `pages/contacto.html`: información y formulario de contacto.
 
 ## Tecnologías utilizadas
 
 - HTML5.
 - CSS3.
-- SCSS (Sass).
+- SCSS.
 - Bootstrap 5.3.8.
-- AOS (Animate On Scroll) 2.3.4.
+- AOS 2.3.4 (Animate On Scroll).
 - Google Fonts (Abel).
-- CSS Grid.
-- Flexbox.
+- CSS Grid y Flexbox.
 - Media Queries.
 - Git y GitHub.
-- Vercel para el despliegue.
+- Vercel.
 
 ## Cómo descargar y ejecutar el proyecto
 
@@ -50,23 +49,23 @@ Ingresar a la carpeta:
 cd plexo_pole_sport
 ```
 
-### Ejecutar el proyecto
+### Visualizar el sitio
 
-Para visualizar el sitio, se puede abrir `index.html` en un navegador o utilizar una extensión como Live Server desde Visual Studio Code.
-
-Los recursos externos, como Bootstrap, AOS y Google Fonts, se cargan mediante CDN, por lo que requieren conexión a Internet.
+Se puede abrir `index.html` en un navegador o utilizar una extensión como Live Server desde Visual Studio Code.
 
 ### Compilar SCSS
 
-Los estilos fuente se encuentran en la carpeta `scss/` y se compilan en `styles/styles.css`.
+El archivo principal de SCSS es `scss/main.scss`. Para compilar los estilos manualmente:
 
-Para compilar automáticamente los cambios durante el desarrollo, ejecutar desde la raíz del proyecto:
+```bash
+sass scss/main.scss styles/styles.css
+```
+
+Para observar y compilar automáticamente los cambios durante el desarrollo:
 
 ```bash
 sass --watch scss/main.scss styles/styles.css
 ```
-
-Se requiere tener Sass instalado y disponible desde la terminal.
 
 ## Estructura del proyecto
 
@@ -74,12 +73,14 @@ Se requiere tener Sass instalado y disponible desde la terminal.
 plexo_pole_sport/
 │
 ├── index.html
-│
 ├── pages/
 │   ├── sobre_nosotros.html
 │   ├── clases.html
 │   ├── faq.html
 │   └── contacto.html
+│
+├── assets/
+│   └── imágenes del sitio
 │
 ├── scss/
 │   ├── main.scss
@@ -103,133 +104,86 @@ plexo_pole_sport/
 │   ├── styles.css
 │   └── styles.css.map
 │
-├── assets/
-│   └── ...
-│
+├── .gitignore
 └── readme.md
 ```
 
 ## Arquitectura SCSS
 
-Los estilos están organizados mediante parciales para facilitar el mantenimiento y la reutilización del código.
+Los estilos se organizan mediante parciales para mantener una estructura modular y facilitar el mantenimiento del código.
 
-La estructura se divide en:
+- `utilities/`: variables y mixins reutilizables.
+- `base/`: estilos generales y tipografía.
+- `layout/`: encabezado, pie de página y navegación.
+- `components/`: botones, tarjetas, imágenes y grillas.
 
-- **utilities/**: variables globales y mixins reutilizables.
-- **base/**: estilos generales, configuración inicial y tipografía.
-- **layout/**: encabezado, navegación y pie de página.
-- **components/**: botones, tarjetas, imágenes y grillas.
+El archivo `main.scss` funciona como punto de entrada e importa los parciales mediante `@use`.
 
-El archivo `scss/main.scss` funciona como punto de entrada e importa los parciales mediante `@use`.
-
-En el proyecto se aplican:
-
-- Variables para centralizar colores y otros valores.
-- Nesting para organizar selectores relacionados.
-- Mixins con parámetros para reutilizar estilos.
-- `@extend` mediante placeholders para compartir declaraciones.
-- Media queries para adaptar los estilos a distintos dispositivos.
+Se utilizan variables para centralizar valores visuales, mixins parametrizados para reutilizar estilos, anidamiento y `@extend` para compartir declaraciones.
 
 El CSS compilado se encuentra en `styles/styles.css`.
 
-## Diseño responsive y Mobile First
+## Diseño responsive
 
-El sitio fue desarrollado siguiendo el enfoque **Mobile First**: los estilos base contemplan primero las pantallas pequeñas y luego se incorporan adaptaciones para dispositivos de mayor tamaño.
+El sitio fue desarrollado siguiendo el enfoque **Mobile First**, adaptándose a dispositivos móviles, tablets y escritorio.
 
-Se utilizan principalmente los siguientes breakpoints:
-
-```scss
-@media (min-width: 768px) {
-    // Adaptaciones para tablet
-}
-
-@media (min-width: 1024px) {
-    // Adaptaciones para escritorio
-}
-```
-
-Para conseguir una distribución adaptable se utilizan:
+Se utilizan:
 
 - CSS Grid.
 - Flexbox.
 - `grid-template-areas`.
 - Unidades relativas como `fr`.
-- `gap`.
-- Media queries.
+- Propiedad `gap`.
+- Media Queries.
 
-El diseño fue comprobado en diferentes tamaños de pantalla, incluyendo 360, 390, 768, 1024 y 1440 píxeles.
+Los principales breakpoints utilizados son:
+
+- `768px`: adaptación para tablets.
+- `1024px`: adaptación para pantallas de escritorio.
+
+Se verificó el comportamiento visual en diferentes anchos de pantalla, incluyendo 360, 768, 1024 y 1440 píxeles.
 
 ## Bootstrap
 
-Se utiliza Bootstrap 5.3.8 para incorporar componentes y facilitar la adaptación responsive.
+Se utiliza Bootstrap 5.3.8 para incorporar componentes y funcionalidades responsive.
 
-Entre sus implementaciones se encuentran:
+Entre los componentes implementados se encuentran:
 
 - Navbar responsive con menú hamburguesa.
 - Carrusel de imágenes.
 - Acordeón de preguntas frecuentes.
 
-Los componentes se personalizan mediante los estilos propios desarrollados en SCSS.
+## Animaciones
 
-## Animaciones y efectos visuales
+El proyecto incorpora animaciones mediante:
 
-El sitio incorpora animaciones para acompañar la navegación y mejorar la experiencia visual.
+- **AOS:** animaciones al desplazarse por la página.
+- **CSS y SCSS:** transiciones para elementos interactivos.
+- **`@keyframes`:** animaciones nativas para efectos visuales.
 
-### Librería AOS
-
-Se utiliza AOS (Animate On Scroll) para aplicar animaciones a los elementos cuando ingresan en el área visible de la pantalla.
-
-Se utilizan efectos como:
-
-- `fade-up`.
-- `fade-left`.
-- `zoom-in`.
-
-La configuración contempla una duración de 700 milisegundos, ejecución única y desplazamiento de 100 píxeles.
-
-También se contempla la preferencia del sistema para reducir el movimiento mediante `prefers-reduced-motion`.
-
-### Animaciones con CSS y SCSS
-
-Se incorporan transiciones y animaciones propias mediante:
-
-- `transition`.
-- `@keyframes`.
-- `transform`.
-- `opacity`.
-
-Estos efectos se aplican en botones, controles del carrusel, acordeón y elementos visuales del sitio.
+También se contemplan preferencias de accesibilidad relacionadas con la reducción del movimiento.
 
 ## SEO y accesibilidad
 
-Se incorporan mejoras de SEO on-page y accesibilidad:
+Se incorporaron mejoras de SEO on-page y accesibilidad:
 
-- Títulos descriptivos y específicos para cada página.
-- Meta descriptions individuales.
-- Meta keywords específicas por página.
-- Textos alternativos (`alt`) descriptivos en las imágenes.
-- Uso de etiquetas HTML semánticas.
-- Asociación entre etiquetas `label` y campos del formulario.
-- Indicadores visuales de foco para elementos interactivos.
-- Consideraciones de contraste de colores.
-- Soporte para la preferencia de reducción de movimiento.
+- Etiquetas HTML semánticas.
+- Títulos y descripciones específicos para cada página.
+- Meta keywords por página.
+- Textos alternativos descriptivos en las imágenes.
+- Navegación accesible.
+- Etiquetas asociadas a los campos del formulario.
+- Consideraciones de contraste y estados de foco.
+- Adaptaciones para usuarios que prefieren reducir las animaciones.
 
 ## Formulario de contacto
 
-La página de contacto incluye un formulario con campos para nombre, correo electrónico y mensaje.
-
-El formulario es parte de la interfaz visual del proyecto y actualmente no está conectado a un backend ni a un servicio externo de recepción de consultas.
+La página de contacto incluye un formulario visual para facilitar las consultas. El formulario forma parte de la interfaz estática y no cuenta con conexión a un backend.
 
 ## Despliegue
 
-El proyecto se prepara para su publicación mediante **Vercel**, conectado al repositorio de GitHub.
+El sitio se encuentra publicado mediante **Vercel**, conectado al repositorio de GitHub.
 
-Una vez realizado el despliegue, la URL pública se incorporará en la sección inicial de este README.
+Cada actualización enviada a la rama principal `main` permite generar un nuevo despliegue de producción.
 
----
-
-## Objetivo del proyecto
-
-El objetivo del proyecto final es integrar los conocimientos adquiridos durante el curso Desarrollo Web, desarrollando un sitio estático de cinco páginas que combine estructura semántica, estilos avanzados, diseño responsive, componentes de Bootstrap, animaciones, SEO y accesibilidad.
-
-Se busca construir una experiencia visual coherente con la identidad de PLEXO Pole Sport y facilitar el acceso a la información desde distintos dispositivos.
+**URL de producción:** [https://plexopolesport.vercel.app/](https://plexopolesport.vercel.app/)
